@@ -1,6 +1,5 @@
 // Node server which will handle socket io connections
-import {Server} from 'socket.io'
-const io = new Server(process.env.PORT || 8000)
+const io = require('socket.io')(process.env.PORT || 8000)
 
 const users = {};
 
